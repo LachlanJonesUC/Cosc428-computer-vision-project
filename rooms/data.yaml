@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 11
+names: ['brain', 'commune', 'drink', 'enter', 'give', 'grief', 'kill', 'pyramid', 'stop', 'traveler', 'worship']
+
+roboflow:
+  workspace: vowsymbols
+  project: vow-symbols-2
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/vowsymbols/vow-symbols-2/dataset/1

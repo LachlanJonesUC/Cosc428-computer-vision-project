@@ -1,0 +1,22 @@
+500 epochs completed in 0.479 hours.
+Optimizer stripped from runs\detect\train2\weights\last.pt, 6.3MB
+Optimizer stripped from runs\detect\train2\weights\best.pt, 6.3MB
+
+Validating runs\detect\train2\weights\best.pt...
+Ultralytics YOLOv8.1.47 🚀 Python-3.11.8 torch-2.2.2+cu121 CUDA:0 (NVIDIA GeForce RTX 3060 Ti, 8191MiB)
+Model summary (fused): 168 layers, 3007793 parameters, 0 gradients, 8.1 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 4/4 [00:00<00:00,  6.20it/s]
+                   all        117        150      0.954      0.942      0.959      0.826
+                 brain        117         13      0.968      0.846      0.939       0.76
+               commune        117         17      0.995          1      0.995      0.842
+                 drink        117         14      0.857          1      0.951      0.762
+                 enter        117         13      0.976          1      0.995      0.874
+                  give        117         11        0.9          1      0.965      0.852
+                 grief        117         11          1      0.947      0.995      0.957
+                  kill        117         11      0.988      0.909      0.927      0.766
+               pyramid        117         11       0.91      0.923      0.957       0.87
+                  stop        117         13      0.921      0.901      0.875      0.631
+              traveler        117         14      0.977          1      0.995      0.914
+               worship        117         22          1      0.839      0.959      0.855
+Speed: 0.1ms preprocess, 1.0ms inference, 0.0ms loss, 0.8ms postprocess per image
+Results saved to runs\detect\train2
