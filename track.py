@@ -3,12 +3,16 @@ import dxcam
 import cv2
 import pygetwindow as gw
 import time
+import os
 
 def main():
     # video capture parameters
     application_name = "Destiny 2"
     displayWindow_name = "Vow Detection"
     target_fps = 30
+    
+    # screenshot variables
+    screenshot_count = len(os.listdir("screenshots"))
 
     # loading model
     # model = YOLO('../runs/detect/train/weights/best.pt')
@@ -33,7 +37,7 @@ def main():
     cv2.resizeWindow(displayWindow_name, 1280, 720)  # 640, 360 : 1280, 720 : 2560, 1080
     cv2.setWindowProperty(displayWindow_name, cv2.WND_PROP_TOPMOST, 1)
 
-    # initialise framerate calculation variables
+    # framerate calculation variables
     start_time = time.time()
     frame_count = 0
     fps = 0
@@ -58,8 +62,13 @@ def main():
         cv2.imshow(displayWindow_name, image)
 
         # Check for key press to exit
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        key = cv2.waitKey(1) & 0xFF
+        if key == ord('q'):
             camera.stop()
+            
+        elif key == ord('s'):
+            screenshot_count += 1
+            cv2.imwrite(f"screenshots/screenshot-{screenshot_count}.png", image)
 
     cv2.destroyAllWindows()
 
