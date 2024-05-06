@@ -9,7 +9,7 @@ def main():
     # video capture parameters
     application_name = "Destiny 2"
     displayWindow_name = "Vow Detection"
-    target_fps = 30
+    target_fps = 60
     
     # screenshot variables
     screenshot_count = len(os.listdir("screenshots"))

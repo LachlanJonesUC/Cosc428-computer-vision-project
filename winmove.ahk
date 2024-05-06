@@ -1,0 +1,1 @@
+WinMove, Destiny 2,,0,0
